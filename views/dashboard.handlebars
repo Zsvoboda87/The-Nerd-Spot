@@ -1,7 +1,8 @@
 <section>
-  <h2>Create New Post</h2>
+  
 
-  <form class="new-post-form">
+  <form class="new-post-form flex-center">
+    <h2>Create New Post</h2>
     <div>
       <label for="post-title">Title</label>
       <input type="text" id="post-title" name="post-title" />
@@ -16,15 +17,14 @@
 
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
-  <ol>
+  <h2 class="flex-center">Your Posts</h2>
+  <div>
     {{#each posts as |post|}}
-    <li>
+    <div>
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
+    </div>
     {{/each}}
-  </ol>
+  </div>
 </section>
 {{/if}}
 
